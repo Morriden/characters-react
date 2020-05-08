@@ -14,13 +14,14 @@ export default class ListPage extends Component {
     this.setState({ data: data })
     }
 
-    render() {         
+    render() {
+        console.log(this.state.data)         
         return <ul>{this.state.data.map(character => 
                     <li>
                         <Link to={`/listitem/${character.id}`}><h3>Name: {character.name}</h3></Link>
                         <p>Level: {character.level}</p>
                         <p>Alignment: {character.alignment}</p>
-                        <p>Current Status: {character.is_alive}</p>
+                        <p>Current Status: {String(character.is_alive)}</p>
                         <p>Description: {character.description}</p>
 
                     </li>)}

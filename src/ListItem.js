@@ -22,7 +22,7 @@ export default class ListItem extends Component {
                         <h3>Name: {this.state.data.name}</h3>
                         <p>Level: {this.state.data.level}</p>
                         <p>Alignment: {this.state.data.alignment}</p>
-                        <p>Current Status: {this.state.data.is_alive}</p>
+                        <p>Current Status: {String(this.state.data.is_alive)}</p>
                         <p>Description: {this.state.data.description}</p>
             </div>
         )

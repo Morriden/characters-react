@@ -8,6 +8,7 @@ import HomePage from './HomePage.js'
 import ListPage from './ListPage.js'
 import ListItem from './ListItem.js'
 import AboutMePage from './AboutMePage.js'
+import AdminPage from './AdminPage.js'
 
 
 export default class App extends Component {
@@ -32,6 +33,10 @@ export default class App extends Component {
                         <Route
                           path="/aboutme"
                           render={(routerProps) => <AboutMePage {...routerProps} />}
+                      />
+                      <Route
+                          path="/adminpage"
+                          render={(routerProps) => <AdminPage {...routerProps} />}
                       />
                   </Switch>
               </Router>
