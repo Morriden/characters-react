@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent';
-import { Link } from 'react-router-dom';
+import Header from './Header.js';
 export default class AdminPage extends Component {
     state = {
             name: '',
@@ -19,7 +19,7 @@ export default class AdminPage extends Component {
             is_alive: this.state.is_alive,
             description: this.state.description,
         })
-        this.props.history.push('/')
+        this.props.history.push('/listpage')
     }
 
     handleChange = (e) => {
@@ -36,34 +36,34 @@ export default class AdminPage extends Component {
 
     }
 
-
     render() {
         return (
             <div>
-                <Link to ={'/listpage'}>Look at more Heroes and Villians</Link>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Character Name: 
-                        <input onChange={this.handleChange} value={this.state.name} name="name" />
-                    </label>
-                    <label>
-                        Character Level: 
-                        <input onChange={this.handleChange} value={this.state.level} name="level" type="number"/>
-                    </label>
-                    <label>
-                        Character Alignment: 
-                        <input onChange={this.handleChange} value={this.state.alignment} name="alignment"/>
-                    </label>
-                    <label>
-                        Is Character Alive?
-                        <input onChange={this.handleChange} name="is_alive" type="radio" value="true"/>
-                        Is Character Dead?
-                        <input onChange={this.handleChange} name="is_alive" type="radio" value=""/>
-                    </label>
-                    <label>
-                        Character Description: 
-                        <input onChange={this.handleChange} value={this.state.description} name="description"/>
-                    </label>
+                <Header/>
+                <form className="admin-page-body" onSubmit={this.handleSubmit}>
+                        <label> Character Name: </label>
+                        <input className="admin-page-input" onChange={this.handleChange} value={this.state.name} name="name" />
+                        
+                        <label> Character Alignment: </label>
+                        <input className="admin-page-input" onChange={this.handleChange} value={this.state.alignment} name="alignment"/>
+                        
+                        <label> Character Description:</label>
+                        <input className="admin-page-input" onChange={this.handleChange} value={this.state.description} name="description"/>
+                        
+                    <div>
+                        <label>
+                            Character Level: 
+                            <input className="admin-page-input" onChange={this.handleChange} value={this.state.level} name="level" type="number"/>
+                        </label>
+                        
+                        <label>
+                            Is Character Alive?
+                            <input onChange={this.handleChange} name="is_alive" type="radio" value="true"/>
+                            Is Character Dead?
+                            <input onChange={this.handleChange} name="is_alive" type="radio" value=""/>
+                        </label>
+                    </div>
+                    
                     <button>Submit</button>
                 </form>
             </div>

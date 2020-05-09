@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import request from 'superagent'
+import Header from './Header.js'
 
 export default class ListPage extends Component {
 
@@ -16,15 +17,18 @@ export default class ListPage extends Component {
 
     render() {
         console.log(this.state.data)         
-        return <ul>{this.state.data.map(character => 
-                    <li>
-                        <Link to={`/listitem/${character.id}`}><h3>Name: {character.name}</h3></Link>
-                        <p>Level: {character.level}</p>
-                        <p>Alignment: {character.alignment}</p>
-                        <p>Current Status: {String(character.is_alive)}</p>
-                        <p>Description: {character.description}</p>
+        return <div className="list-page-body">
+                    <Header/>
+                        <ul className="list-page"> {this.state.data.map(character => 
+                            <li className="list-item">
+                            <Link className="link-to-character" to={`/listitem/${character.id}`}>Name: {character.name}</Link>
+                            <p>Character Level: {character.level}</p>
+                            <p>Character Alignment: {character.alignment}</p>
+                            <p>Alive?: {String(character.is_alive)}</p>
+                            <p>Description: {character.description}</p>
 
-                    </li>)}
-               </ul>
+                            </li>)}
+                        </ul>
+               </div>
     }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent'
-import { Link } from 'react-router-dom'
+import Header from './Header'
 
 export default class ListItem extends Component {
     state = {
@@ -18,7 +18,7 @@ export default class ListItem extends Component {
 
         return (
             <div>       
-                        <Link to ={'/listpage'}>Look at more Heroes and Villians</Link>
+                        <Header/>
                         <h3>Name: {this.state.data.name}</h3>
                         <p>Level: {this.state.data.level}</p>
                         <p>Alignment: {this.state.data.alignment}</p>
