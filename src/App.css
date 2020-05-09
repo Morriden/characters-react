@@ -113,17 +113,27 @@ img {
   background: red;
 }
 
+.admin-page-body {
+  background-color: gray;
+  height: 530px;
+}
+
+.admin-page-form {
+  margin: 15px;
+}
+
 .admin-page-input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 98%;
+  padding: 13px;
+  margin: 15px;
   display: inline-block;
   border: 3px solid black;
   border-radius: 10px;
   box-sizing: border-box;
 }
 
-label {
+.label-input {
   border: 2px solid black;
   border-radius: 10px;
+  padding: 10px;
 }

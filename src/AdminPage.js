@@ -38,33 +38,34 @@ export default class AdminPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="admin-page-body">
                 <Header/>
-                <form className="admin-page-body" onSubmit={this.handleSubmit}>
-                        <label> Character Name: </label>
+                <form className="admin-page-form" onSubmit={this.handleSubmit}>
+                        <label className="label-input"> Character Name: </label>
                         <input className="admin-page-input" onChange={this.handleChange} value={this.state.name} name="name" />
                         
-                        <label> Character Alignment: </label>
+                        <label className="label-input"> Character Alignment: </label>
                         <input className="admin-page-input" onChange={this.handleChange} value={this.state.alignment} name="alignment"/>
                         
-                        <label> Character Description:</label>
+                        <label className="label-input"> Character Description:</label>
                         <input className="admin-page-input" onChange={this.handleChange} value={this.state.description} name="description"/>
                         
                     <div>
-                        <label>
-                            Character Level: 
+                        <label className="label-input">Character Level: </label>
+                            
                             <input className="admin-page-input" onChange={this.handleChange} value={this.state.level} name="level" type="number"/>
-                        </label>
                         
-                        <label>
+                        
+                        <label className="label-input">
                             Is Character Alive?
                             <input onChange={this.handleChange} name="is_alive" type="radio" value="true"/>
                             Is Character Dead?
                             <input onChange={this.handleChange} name="is_alive" type="radio" value=""/>
                         </label>
+                        <button>Submit</button>
                     </div>
                     
-                    <button>Submit</button>
+                    
                 </form>
             </div>
         )
