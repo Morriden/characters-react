@@ -45,9 +45,15 @@ export default class AdminPage extends Component {
                         <label className="label-input"> Character Name: </label>
                         <input className="admin-page-input" onChange={this.handleChange} value={this.state.name} name="name" />
                         
-                        <label className="label-input"> Character Alignment: </label>
-                        <input className="admin-page-input" onChange={this.handleChange} value={this.state.alignment} name="alignment"/>
-                        
+                        <label className="label-input"> Character Alignment:
+                            Good Alignment
+                            <input onChange={this.handleChange} type="radio" value="1" name="alignment"/>
+                            Neutral Alignment
+                            <input onChange={this.handleChange} type="radio" value="2" name="alignment"/>
+                            Evil Alignment
+                            <input onChange={this.handleChange} type="radio" value="3" name="alignment"/>
+                        </label>
+
                         <label className="label-input"> Character Description:</label>
                         <input className="admin-page-input" onChange={this.handleChange} value={this.state.description} name="description"/>
                         
