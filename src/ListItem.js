@@ -23,14 +23,18 @@ export default class ListItem extends Component {
     render() {
         console.log(this.state.data, 'hey')
         return (
-            <div>       
+            <div className="list-item-page">       
                         <Header/>
-                        <h3>Name: {this.state.data.name}</h3>
-                        <p>Level: {this.state.data.level}</p>
-                        <p>Alignment: {this.state.data.alignment}</p>
-                        <p>Current Status: {String(this.state.data.is_alive)}</p>
-                        <p>Description: {this.state.data.description}</p>
-                        <button onClick={this.handleSubmit}>DELETE Character</button>
+                        <div className="list-item-detail-mid">
+                            <div className="list-item-detail">
+                                <h3 className="list-item-name">Name: {this.state.data.name}</h3>
+                                <p>Level: {this.state.data.level}</p>
+                                <p>Alignment: {this.state.data.alignment}</p>
+                                <p>Current Status: {String(this.state.data.is_alive)}</p>
+                                <p>Description: {this.state.data.description}</p>
+                            </div>
+                            <button className="button-delete" onClick={this.handleSubmit}>DELETE Character</button>
+                        </div>
             </div>
         )
     }

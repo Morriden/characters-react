@@ -111,6 +111,7 @@ img {
 
 .list-page-body {
   background: red;
+  height: 800px;
 }
 
 .admin-page-body {
@@ -136,4 +137,47 @@ img {
   border: 2px solid black;
   border-radius: 10px;
   padding: 10px;
+}
+
+.list-item-page {
+  background: rgb(179, 28, 28);
+  height: 800px;
+}
+
+.list-item-detail-mid {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-item-detail {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  font-family: fantasy;
+  font-size: small;
+  border: black 3px solid;
+  border-radius: 10px;
+  margin: 15px;
+  text-align: center;
+  background-color: goldenrod;
+  width: 300px;
+  height: 200px;
+}
+
+.button-delete {
+  
+}
+
+.list-item-name {
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: rgb(197, 244, 248);
+  padding: 2px;
+  color: rgb(49, 4, 100);
+  text-decoration: none;
+  color: rgb(8, 148, 113);
 }
