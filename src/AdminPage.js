@@ -19,6 +19,7 @@ export default class AdminPage extends Component {
             is_alive: this.state.is_alive,
             description: this.state.description,
         })
+        console.log(newCharacter, 'new')
         this.props.history.push('/listpage')
     }
 
